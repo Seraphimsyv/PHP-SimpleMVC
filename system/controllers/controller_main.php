@@ -56,32 +56,17 @@
 
         public function action_help()
         {
-            $data = [
-                "title" => "Core",
-            ];
-
-            $this->view->set_content('core.php');
-            $this->view->render($data);
+            $this->notFound();
         }
 
         public function action_about()
         {
-            $data = [
-                "title" => "Core",
-            ];
-
-            $this->view->set_content('core.php');
-            $this->view->render($data);
+            $this->notFound();
         }
 
         public function action_core()
         {
-            $data = [
-                "title" => "Core",
-            ];
-
-            $this->view->set_content('core.php');
-            $this->view->render($data);
+            $this->notFound();
         }
 
         public function notFound()
