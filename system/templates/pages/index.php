@@ -147,7 +147,7 @@
     <div class="d-flex justify-content-around">
         
         <div class="m-2">
-            <h2 class="featurette-heading">Диспетчер запросов.</h2>
+            <h2 class="featurette-heading">Работа с Simple-NoSQL</h2>
             <p class="lead">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae quisquam voluptas facilis ea, veniam amet omnis eaque repellendus ut maiores sint vel libero facere nulla autem delectus aspernatur deleniti ratione.</p>
         </div>
         
