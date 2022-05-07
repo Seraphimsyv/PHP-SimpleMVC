@@ -1,6 +1,6 @@
 <?php
 
-    abstract class Controller
+    abstract class Abstract_Controller
     {
 
         abstract function action_index();

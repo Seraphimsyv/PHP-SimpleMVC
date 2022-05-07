@@ -2,7 +2,7 @@
 
     require ROOT . 'lib' . DIRECTORY_SEPARATOR . 'simple-no-sql.php';
 
-    abstract class Model
+    abstract class Abstract_Model
     {
         public function connect()
         {

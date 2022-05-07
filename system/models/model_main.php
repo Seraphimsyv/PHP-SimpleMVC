@@ -1,6 +1,6 @@
 <?php
 
-    class Model_Main extends Model
+    class Model_Main extends Abstract_Model
     {
 
         public $table_name = "documentation";

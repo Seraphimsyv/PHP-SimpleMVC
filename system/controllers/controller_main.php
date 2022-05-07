@@ -1,6 +1,6 @@
 <?php
 
-    class Controller_Main extends Controller
+    class Controller_Main extends Abstract_Controller
     {
         public $model;
         public $view;
@@ -14,9 +14,7 @@
             include VIEWS . 'view_main.php';
 
             $this->model = new Model_Main();
-
-            $this->view = new View_Main();
-            $this->view->set_template('template.php');
+            $this->view = new View_Main('template.php');
 
             $this->urls = [
                 [$this->url . '', 'action_index'],
