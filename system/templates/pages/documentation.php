@@ -12,9 +12,9 @@
 
                     <div class="card shadow-sm">
                         <div class="card-body">
-                            <h5 class="card-title"><?=$doc['name'];?></h5>
+                            <h5 class="card-title"><?=$doc['title'];?></h5>
                             <p class="card-text"><?=substr(trim($doc['description']), 0, 50);?>.</p>
-                            <a href="?document=<?=$slug;?>" class="btn btn-primary">Go somewhere</a>
+                            <a href="?document=<?=$doc['slug'];?>" class="btn btn-primary">Go somewhere</a>
                         </div>
                     </div>
         
@@ -26,7 +26,7 @@
     
     <?php else : ?>
 
-        <h2 class="pb-2 border-bottom"><?=$data['doc']['name'];?></h2>
+        <h2 class="pb-2 border-bottom"><?=$data['doc']['title'];?></h2>
 
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, aspernatur porro sequi possimus soluta explicabo impedit ut facilis perferendis, nihil nam, aut ab repellendus ipsa. Labore sed id dolorum commodi!
