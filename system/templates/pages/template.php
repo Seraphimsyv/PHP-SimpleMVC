@@ -9,9 +9,9 @@
 </head>
 <body>
 
-    <div class="p-5">
+    <div class="">
 
-        <div class="fixed-top">
+        <div class="">
         
             <nav class="py-2 bg-dark text-white border-bottom">
                 <div class="container d-flex flex-wrap justify-content-center">
@@ -36,7 +36,7 @@
 
     </div>
 
-    <div class="container d-flex justify-content-center align-items-center mt-3 pt-3" style="min-height: 80vh">
+    <div class="container d-flex justify-content-center align-items-center mt-3 pt-3" style="min-height: 75vh">
 
         <div class="container-fluid mt-3 pt-3">
             
