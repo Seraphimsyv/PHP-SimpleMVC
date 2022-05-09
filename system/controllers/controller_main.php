@@ -17,11 +17,11 @@
             $this->view = new View_Main('template.php');
 
             $this->urls = [
-                [$this->url . '', 'action_index'],
-                [$this->url . 'documentation/', 'action_documentation'],
-                [$this->url . 'help/', 'action_help'],
-                [$this->url . 'about/', 'action_about'],
-                [$this->url . 'core/', 'action_core']
+                ['path', $this->url . '', 'action_index'],
+                ['path', $this->url . 'documentation/', 'action_documentation'],
+                ['path', $this->url . 'help/', 'action_help'],
+                ['path', $this->url . 'about/', 'action_about'],
+                ['path', $this->url . 'core/', 'action_core']
             ];
         }
 
