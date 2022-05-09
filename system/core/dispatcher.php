@@ -6,6 +6,8 @@
         static function router()
         {
 
+            session_start();
+
             if(isset($_SERVER['PATH_INFO']))
             {
                 $path = $_SERVER['PATH_INFO'];
@@ -50,10 +52,15 @@
                 foreach($pattern[1] as $urls)
                 {
                     // Проверка на существование паттерна
-                    if($path == $urls[0])
+                    if($urls[0] == 'path' and $path == $urls[1])
                     {
                         $controller = $pattern[0];
-                        $action = $urls[1];
+                        $action = $urls[2];
+                    }
+                    if($urls[0] == 'regex' and preg_match("/$urls[1]/", $path, $math) == 1)
+                    {
+                        $controller = $pattern[0];
+                        $action = $urls[2];
                     }
                 }
             }
