@@ -1,6 +1,8 @@
 <?php
 
-    class View_Main extends Abstract_Views
+    namespace System\Views;
+
+    class View_Main extends \System\Core\Abstract_Views
     {
         public $template;
         public $content;

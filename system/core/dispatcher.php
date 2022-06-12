@@ -1,5 +1,9 @@
 <?php
 
+    namespace System\Core;
+
+    namespace System\Core;
+
     class Dispatcher
     {
         
@@ -32,13 +36,13 @@
                     // Отделяем имя
                     $controller_name = explode('_', $controller_pattern[0]);
                     // Подготовливаем имя для импортирования
-                    $controller_name = 'Controller_' . ucfirst($controller_name[1]);
+                    $controller_name = '\System\Controllers\Controller_' . ucfirst($controller_name[1]);
                     // Импорт файла контроллера
                     include CONTROLLERS . $file_name;
                     // Создаем контроллер
                     $controller = new $controller_name();
                     // Добавление новых урлов с контроллером
-                    array_push($urlspatterns, [$controller, $controller->urls]);
+                    array_push($urlspatterns, [$controller_name, $controller_name::$urls]);
                 }
             }
 
@@ -67,12 +71,9 @@
 
             if(!isset($action))
             {
-                echo 'Not Found';
-
-                echo "<pre>";
-                var_dump($_SERVER);
-                echo "</pre>";
+                exit("Not found");
             } else {
+                $controller = new $controller();
                 $controller->$action();
             }
 

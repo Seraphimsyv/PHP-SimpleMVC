@@ -1,28 +1,28 @@
 <?php
 
-    class Controller_Main extends Abstract_Controller
+    namespace System\Controllers;
+
+    class Controller_Main extends \System\Core\Abstract_Controller
     {
+
         public $model;
         public $view;
 
-        public $urls;
-        public $url = '/';
+        static public $urls = [
+            
+            ['path', '/', 'action_index'],
+            ['path', '/documentation/', 'action_documentation'],
+            ['path', '/help/', 'action_help'],
+            ['path', '/about/', 'action_about'],
+            ['path', '/core/', 'action_core']
+        ];
 
         function __construct()
         {
-            include MODELS . 'model_main.php';
-            include VIEWS . 'view_main.php';
 
-            $this->model = new Model_Main();
-            $this->view = new View_Main('template.php');
+            $this->model = new \System\Models\Model_Main();
+            $this->view = new \System\Views\View_Main('template.php');
 
-            $this->urls = [
-                ['path', $this->url . '', 'action_index'],
-                ['path', $this->url . 'documentation/', 'action_documentation'],
-                ['path', $this->url . 'help/', 'action_help'],
-                ['path', $this->url . 'about/', 'action_about'],
-                ['path', $this->url . 'core/', 'action_core']
-            ];
         }
 
         public function action_index()

@@ -1,6 +1,8 @@
 <?php
 
-    class Model_Main extends Abstract_Model
+    namespace System\Models;
+
+    class Model_Main extends \System\Core\Abstract_Model
     {
 
         public $table_name = "documentation";
